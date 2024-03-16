@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="brand">TRAVEL WITH US</a>
+        <div id="menu-btn"></div>
+    <div class="navigation">
+        <div class="navigation-items">
+            <a href="#" class="a">Home</a>
+            <a href="#" class="b">About</a>
+            <a href="#" class="c">Explore</a>
+            <a href="#" class="d">Gallery</a>
+            <a href="#" class="e">Contact</a>
+
+        </div>
+    </div>
+</header>
+<section class="home">
+    <div id="video">
+    <video class="video-slide" src="video 1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="video 2.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="video 3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="video 4.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="video 5.mp4" autoplay muted loop></video></div>
+    <div class="content">
+        <h1>Wonderful<br><span>Places around the world</span></h1>
+        <p>
+            Feel the air and let sunlight touch your soul. We believe all people have a beautiful place in their minds. We, too, have a beautiful place that made us ecstatic many a times, in the previous years. On the other hand we think we are the only persons who cherish these places and I wonder if I am the only one who thinks the place is beautiful as I has thought then.
+        </p>
+        <a href="#">Read More</a>
+    </div>
+    <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-navigation">
+     <div class="nav-btn"></div>
+     <div class="nav-btn "></div>
+     <div class="nav-btn "></div>
+     <div class="nav-btn "></div>
+     <div class="nav-btn "></div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    
+
+var sliderNav = function(manual){
+  btns.forEach((btn)=>{
+    btn.classList.remove("active");});
+    slides.forEach((slide)=>{
+    slide.classList.remove("active");});
+
+  btns[manual].classList.add("active");
+  slides[manual].classList.add("active");
+}
+btns.forEach((btn,i)=>{
+    btn.addEventListener("click",()=>{
+    sliderNav(i);
+    });
+});
+
+</script>
+</body>
+</html>
